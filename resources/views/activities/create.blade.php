@@ -57,8 +57,8 @@
                         <input type="radio" id="indoor_football" value="indoor_football" name="interest">
                         <label for="indoor_football" class="light">Indoor football</label><br>
 
-                        <input type="radio" id="cinema" value="cinema" name="interest">
-                        <label for="cinema" class="light">Cinema</label><br>
+                        <input type="radio" id="go_kart" value="go_kart" name="interest">
+                        <label for="go_kart" class="light">Go-kart</label><br>
 
                         <input type="radio" id="bowling" value="bowling" name="interest">
                         <label for="bowling" class="light">Bowling</label><br>

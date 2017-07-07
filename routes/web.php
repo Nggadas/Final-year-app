@@ -1,9 +1,11 @@
 <?php
 
 Route::get('/', 'ActivitiesController@index')->name('home');
-Route::get('/home', 'ActivitiesController@index')->name('home');
+Route::get('/home', 'ActivitiesController@index');
 
 Route::get('/activities/create', 'ActivitiesController@create');
+Route::get('/activities/{activity}', 'ActivitiesController@viewActivity');
+Route::get('/activities/join', 'ActivitiesController@join');
 Route::post('/activities', 'ActivitiesController@store');
 Route::get('/activities/created', 'ActivitiesController@createdActivities');
 Route::get('/activities/joined', 'ActivitiesController@joinedActivities');
@@ -22,8 +24,4 @@ Route::get('/places', function () {
 
 Route::get('/create_group', function () {
     return view('groups.create_group');
-});
-
-Route::get('/joined_activities', function () {
-    return view('activities.joined_activities');
 });

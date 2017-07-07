@@ -15,6 +15,10 @@ class CreateActivityMembersTable extends Migration
     {
         Schema::create('activity_members', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('activity_id');
+            $table->integer('user_id');
+            $table->string('firstname');
+            $table->string('lastname');
             $table->timestamps();
         });
     }
