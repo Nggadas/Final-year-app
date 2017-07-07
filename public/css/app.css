@@ -108,6 +108,7 @@ label.light {
   background-color: #ff594d;
   color: #fff;
   padding: 2px;
+  text-align: left;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }

@@ -15,7 +15,7 @@
                 <a href="#" class="dropbtn">Activities</a>
                 <div class="dropdown-content">
                     <a href="/activities/create" style="color: #000;padding: 10px;font-size: 12px;text-align: left">Create activity</a>
-                    <a href="/my_activities" style="color: #000;padding: 10px;font-size: 12px;border-top: solid 1px #000;text-align: left;">My activities</a>
+                    <a href="/activities/created" style="color: #000;padding: 10px;font-size: 12px;border-top: solid 1px #000;text-align: left;">My activities</a>
                 </div>
             </div>
 
@@ -28,16 +28,20 @@
                 </div>
             </div>
 
-            <div class="account">
-                <img class="nav-pic" src="../../images/avartar.png" alt="">
-                <div class="dropdown">
-                    <a href="#" class="dropbtn">John Doe<span> &#9660; </span></a>
-                    <div class="dropdown-content">
-                        <a href="#" style="color: #000;padding: 10px;font-size: 12px;text-align: left">Edit Profile</a>
-                        <a href="#" style="color: #000;padding: 10px;font-size: 12px;border-top: solid 1px #000;text-align: left;">Sign out</a>
-                    </div>
-                </div>
-            </div>
+                    @if (Auth::check())
+                        <div class="account">
+                            <img class="nav-pic" src="../../images/avartar.png" alt="">
+                            <div class="dropdown">
+                                <a href="#" class="dropbtn">{{ Auth::user()->firstname }}<span> &#9660; </span></a>
+                                <div class="dropdown-content">
+                                    <a href="#" style="color: #000;padding: 10px;font-size: 12px;text-align: left">Edit Profile</a>
+                                    <a href="/logout" style="color: #000;padding: 10px;font-size: 12px;border-top: solid 1px #000;text-align: left;">Logout</a>
+                                </div>
+                            </div>
+                        </div>
+                    @else
+                        <a href="/login">Login</a>
+                    @endif
         </nav>
     </div>
 </header>

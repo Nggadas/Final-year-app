@@ -3,10 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Activity;
+use App\User;
 use Illuminate\Http\Request;
 
 class ActivitiesController extends Controller
 {
+//    public function __construct()
+//    {
+//        $this->middleware('auth')->except(['index']);
+//    }
+
     public function index()
     {
         $activities = Activity::latest()->get();
@@ -17,6 +23,21 @@ class ActivitiesController extends Controller
     public function create()
     {
         return view('activities.create');
+    }
+
+    public function createdActivities()
+    {
+//        $id = auth()->id();
+//        $user = User::all()->find($id);
+
+        $activities = Activity::all();
+
+        return view('activities.my_activities', compact( 'activities'));
+    }
+
+    public function joinedActivities()
+    {
+        return view('activities.joined_activities');
     }
 
     public function store()
@@ -41,11 +62,11 @@ class ActivitiesController extends Controller
             'about' => request('about'),
             'city' => request('city'),
             'interest' => request('interest'),
-            'user_id' => 1,
+            'user_id' => auth()->id(),
             'completed' => 'false',
         ]);
 
-        session()->flash('message', 'Your post has now been published');
+        session()->flash('message', 'Your activity was created successfully!');
 
         return redirect('/');
     }

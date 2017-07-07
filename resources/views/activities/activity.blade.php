@@ -3,7 +3,7 @@
     <div class="content-img"><img src="../../images/hiking.jpg" alt=""></div>
 
     <div class="content-details">
-        <a class="content-title" href="{{ $activity->title }}">Hiking at golden acre park</a>
+        <a class="content-title" href="#">{{ $activity->name }}</a>
         <p>{{ $activity->about }}</p>
         <div class="quick-info">
             <span>Date: </span>{{ $activity->date }} |

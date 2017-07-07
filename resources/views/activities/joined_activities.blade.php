@@ -1,8 +1,8 @@
 @extends('layouts.master')
 
 @section('content')
-    <a href="/joined_activities" class="left-primary-nav nav-col">Activities You Joined</a>
-    <a href="/my_activities" class="right-primary-nav nav-col">Activities You created</a>
+    <a href="/activities/created" class="right-primary-nav nav-col">Activities You created</a>
+    <a href="/activities/joined" class="left-primary-nav nav-col">Activities You Joined</a>
     <h4>Activities you joined</h4>
 
     <div class="content-div ">

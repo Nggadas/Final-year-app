@@ -14,28 +14,28 @@
 
             <fieldset>
                 <label for="name">Activity name:</label>
-                <input type="text" id="name" name="name" value="{{ old('name') }}" placeholder="activity name..." >
+                <input type="text" id="name" name="name" value="{{ old('name') }}" placeholder="activity name..." required>
 
                 <label for="venue">Venue/Address:</label>
-                <input type="text" id="venue" name="venue"  value="{{ old('venue') }}" placeholder="where is it taking place..." >
+                <input type="text" id="venue" name="venue"  value="{{ old('venue') }}" placeholder="where is it taking place..." required>
 
                 <label for="date">Date:</label>
-                <input type="date" id="date" name="date" value="{{ old('date') }} ">
+                <input type="date" id="date" name="date" value="{{ old('date') }} " required>
 
                 <label for="time">Time:</label>
-                <input type="time" id="time" name="time" value="{{ old('time') }}">
+                <input type="time" id="time" name="time" value="{{ old('time') }}" required>
 
                 <label for="capacity">Max capacity:</label>
-                <input type="number" id="capacity" name="capacity" value="{{ old('capacity') }}" min="1" placeholder="maximum number of attendees..." >
+                <input type="number" id="capacity" name="capacity" value="{{ old('capacity') }}" min="1" placeholder="maximum number of attendees..." required>
 
                 <label for="about">About:</label>
-                <textarea id="about" name="about" rows="8" cols="50"  placeholder="talk about activity..." ></textarea>
+                <textarea id="about" name="about" rows="8" cols="50"  placeholder="talk about activity..." required></textarea>
             </fieldset>
 
             <fieldset>
                 <h4>City:</h4>
                 <label>
-                    <select name="city" id="city">
+                    <select name="city" id="city" >
                         <optgroup label="England">
                             <option value="Leeds">Leeds</option>
                             <option value="Manchester">Manchester</option>
@@ -69,8 +69,8 @@
 
                     <div class="interests-row">
                         <h4>Outdoor activities</h4>
-                        <input type="radio" id="Scuba diving" value="Scuba diving" name="interest">
-                        <label for="Scuba diving" class="light">Scuba diving</label><br>
+                        <input type="radio" id="scuba_diving" value="scuba_diving" name="interest">
+                        <label for="scuba_diving" class="light">Scuba diving</label><br>
 
                         <input type="radio" id="windsurfing" value="windsurfing" name="interest">
                         <label for="windsurfing" class="light">Windsurfing</label><br>

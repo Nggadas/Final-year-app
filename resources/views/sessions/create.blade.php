@@ -27,10 +27,10 @@
 
             <fieldset>
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="user_name" placeholder="email" >
+                <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="email" required>
 
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="password">
+                <input type="password" id="password" name="password" placeholder="password" required>
             </fieldset>
             <button type="submit">Log in</button>
         </form>
