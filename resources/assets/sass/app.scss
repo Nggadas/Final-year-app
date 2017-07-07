@@ -99,7 +99,7 @@ label.light {
   Base Layout Styles
 ==================================== */
 
-/* ---- Dropdown ---- */
+/* ---- Messages ---- */
 .alert-danger{
   background-color: #ff594d;
   color: #fff;
@@ -430,20 +430,6 @@ label.light {
   font-weight: 900;
 }
 
-/*.modal-menu{*/
-/*background-color: #2c9676;*/
-/*color: white;*/
-/*width: 8%;*/
-/*font-weight: 900;*/
-/*font-size: 25px;*/
-/*cursor: pointer;*/
-/*height: 100%;*/
-/*}*/
-
-/*.modal-menu:hover{*/
-/*background-color: #288264;*/
-/*}*/
-
 /* ---- Groups near you ---- */
 
 .group-row{
@@ -559,6 +545,18 @@ input[type="search"] {
   width: 50px;
   margin-left: 0;
   border: none;
+}
+
+/* ---- Members ---- */
+.members{
+  padding: 1em;
+  background: #f1efdd;
+  border-radius: 2px;
+  margin-bottom: 5px;
+}
+
+.members:hover{
+  background: #cccab8;
 }
 
 /* ---- Input fields ---- */

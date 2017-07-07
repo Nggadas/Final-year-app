@@ -1,4 +1,4 @@
-@if($activity->completed != "true")
+@if($activity->completed != "true" && auth()->id() != $activity->user_id)
 <div class="content-div ">
     @if($activity->interest == 'go_kart')
 
@@ -15,8 +15,7 @@
         <p>{{ $activity->about }}</p>
         <div class="quick-info">
             <span>Date: </span>{{ $activity->date }} |
-            <span>Location: </span> {{ $activity->city }} |
-            <span>Members: </span>12
+            <span>Location: </span> {{ $activity->city }}
         </div>
     </div>
 </div>

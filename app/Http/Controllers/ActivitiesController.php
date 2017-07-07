@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Activity;
+use App\ActivityMember;
 use App\User;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
@@ -16,9 +17,11 @@ class ActivitiesController extends Controller
 
     public function index()
     {
+        $members = ActivityMember::all();
+
         $activities = Activity::latest()->get();
 
-        return view('activities.index', compact('activities'));
+        return view('activities.index', compact('activities', 'members'));
     }
 
     public function create()
@@ -35,11 +38,15 @@ class ActivitiesController extends Controller
 
     public function viewActivity(Activity $activity)
     {
-        return view('activities.view_activity', compact('activity'));
+        $members = ActivityMember::all();
+
+        return view('activities.view_activity', compact('activity', 'members'));
     }
 
     public function joinedActivities()
     {
+
+
         return view('activities.joined_activities');
     }
 
@@ -71,24 +78,6 @@ class ActivitiesController extends Controller
 
         session()->flash('message', 'Your activity was created successfully!');
 
-        return redirect('/');
-    }
-
-
-    public function join()
-    {
-//        $id = auth()->id();
-//        $user = User::all()->find($id);
-//
-//        ActivityMember::create([
-//            'activity_id' => request('id'),
-//            'user_id' => $user->id,
-//            'firstname' => $user->firstname,
-//            'lastname' => $user->lastname,
-//        ]);
-
-        session()->flash('message', 'You have been added to the activity!');
-
-        return redirect('/activities/joined');
+        return redirect('/activities/created');
     }
 }

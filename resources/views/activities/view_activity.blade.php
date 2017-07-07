@@ -20,9 +20,14 @@
         </form>
     </div>
 
-    <hr>
-
     <div class="display-div">
         <h4>Members</h4>
+        @foreach($members as $member)
+            @if($member->activity_id == $activity->id)
+                <div class="members">
+                    {{ $member->firstname }} {{ $member->lastname }}
+                </div>
+            @endif
+        @endforeach
     </div>
 @endsection
