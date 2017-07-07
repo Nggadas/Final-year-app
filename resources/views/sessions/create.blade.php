@@ -19,7 +19,12 @@
 <div class="login-register-wrapper">
     <div class="login-register-container">
         <h2>Log in</h2>
-        <form action="" method="post">
+
+        @include('layouts.errors')
+
+        <form action="/login" method="post">
+            {{ csrf_field() }}
+
             <fieldset>
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="user_name" placeholder="email" >
@@ -30,7 +35,7 @@
             <button type="submit">Log in</button>
         </form>
     </div>
-    <span style="margin-top: 20px">Not a member? <a href="/register">Sign up now</a></span>
+    <span style="margin-top: 20px">Not a member? <a href="/register">Sign in</a></span>
 </div>
 </body>
 </html>

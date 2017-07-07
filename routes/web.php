@@ -1,17 +1,13 @@
 <?php
 
-//Route::get('/', 'PostsController@index')->name('home');
+Route::get('/', 'ActivitiesController@index')->name('home');
 
-Route::get('/', function () {
-    return view('activities.index');
-});
+Route::get('/activities/create', 'ActivitiesController@create');
+
+Route::post('/activities', 'ActivitiesController@store');
 
 Route::get('/places', function () {
     return view('activities.places');
-});
-
-Route::get('/create_activity', function () {
-    return view('activities.create_activity');
 });
 
 Route::get('/create_group', function () {

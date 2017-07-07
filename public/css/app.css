@@ -104,6 +104,51 @@ label.light {
 
 /* ---- Dropdown ---- */
 
+.alert-danger {
+  background-color: #ff594d;
+  color: #fff;
+  padding: 2px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.flash-message {
+  position: fixed;
+  z-index: 10;
+  bottom: 20px;
+  right: 20px;
+  background-color: #2ab27b;
+  color: #FFFFFF;
+  padding: 5px;
+  border-radius: 2px;
+  -webkit-animation: flash-message 8s forwards;
+          animation: flash-message 8s forwards;
+}
+
+@-webkit-keyframes flash-message {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes flash-message {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+/* ---- Dropdown ---- */
+
 .dropbtn {
   font-size: 25px;
   border: none;

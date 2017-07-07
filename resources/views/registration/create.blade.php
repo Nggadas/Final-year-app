@@ -19,7 +19,12 @@
 <div class="login-register-wrapper">
     <div class="login-register-container">
         <h2>Register</h2>
+
+        @include ('layouts.errors')
+
         <form action="" method="post">
+            {{ csrf_field() }}
+
             <fieldset>
                 <label for="first_name">First name:</label>
                 <input type="text" id="first_name" name="first_name" placeholder="first name.." >

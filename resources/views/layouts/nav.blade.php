@@ -14,7 +14,7 @@
             <div class="dropdown">
                 <a href="#" class="dropbtn">Activities</a>
                 <div class="dropdown-content">
-                    <a href="/create_activity" style="color: #000;padding: 10px;font-size: 12px;text-align: left">Create activity</a>
+                    <a href="/activities/create" style="color: #000;padding: 10px;font-size: 12px;text-align: left">Create activity</a>
                     <a href="/my_activities" style="color: #000;padding: 10px;font-size: 12px;border-top: solid 1px #000;text-align: left;">My activities</a>
                 </div>
             </div>

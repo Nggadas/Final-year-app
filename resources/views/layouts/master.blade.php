@@ -13,6 +13,12 @@
 <div class="wrapper">
     @include('layouts.nav')
 
+    @if($flash = session('message'))
+        <div class="flash-message" role="alert">
+            {{ $flash }}
+        </div>
+    @endif
+
     <div class="container main-content">
 
         <div class="tertiary col">
