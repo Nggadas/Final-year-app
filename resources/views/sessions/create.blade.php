@@ -27,7 +27,7 @@
 
             <fieldset>
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="email" required>
+                <input type="email" id="email" name="email"  value="{{ old('email') }}" placeholder="email" required>
 
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" placeholder="password" required>
@@ -35,7 +35,7 @@
             <button type="submit">Log in</button>
         </form>
     </div>
-    <span style="margin-top: 20px">Not a member? <a href="/register">Sign in</a></span>
+    <span style="margin-top: 20px">Not a member? <a href="/register">Register here</a></span>
 </div>
 </body>
 </html>

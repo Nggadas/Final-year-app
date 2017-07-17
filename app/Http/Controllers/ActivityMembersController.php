@@ -21,8 +21,21 @@ class ActivityMembersController extends Controller
             'lastname' => $user->lastname,
         ]);
 
-        session()->flash('message', 'You have been added to the activity!');
+        session()->flash('message', 'You have been added to this activity!');
 
-        return redirect('/activities/joined');
+        return redirect()->back();
+    }
+
+    public function destroy()
+    {
+        $id = request('activity_member_id');
+
+        $activityMember = ActivityMember::find($id);
+
+        $activityMember->delete();
+
+        session()->flash('message', 'You have been removed from this activity!');
+
+        return redirect()->back();
     }
 }

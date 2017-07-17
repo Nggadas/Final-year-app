@@ -76,6 +76,7 @@ button {
   text-align: center;
   font-style: normal;
   width: 100%;
+  border: none;
 }
 
 fieldset {
@@ -116,7 +117,7 @@ label.light {
 .flash-message {
   position: fixed;
   z-index: 10;
-  bottom: 20px;
+  top: 50px;
   right: 20px;
   background-color: #2ab27b;
   color: #FFFFFF;
@@ -598,6 +599,14 @@ label.light {
   margin-left: 10px;
 }
 
+.members-img {
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin-right: 5px;
+  margin-left: 10px;
+}
+
 .group-btn {
   font-size: 13px;
   width: 100%;
@@ -640,6 +649,10 @@ input[type="search"] {
 
 .members:hover {
   background: #cccab8;
+}
+
+.danger {
+  background-color: #ff594d;
 }
 
 /* ---- Input fields ---- */

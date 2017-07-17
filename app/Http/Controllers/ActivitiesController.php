@@ -40,13 +40,19 @@ class ActivitiesController extends Controller
     {
         $members = ActivityMember::all();
 
-        return view('activities.view_activity', compact('activity', 'members'));
+        $isMember = false;
+        foreach ($members as $member){
+            if ($member->activity_id == $activity->id && $member->user_id == auth()->id()){
+                $isMember = true;
+                $activityMemberID = $member->id;
+            }
+        }
+
+        return view('activities.view_activity', compact('activity', 'members', 'activityMemberID', 'isMember'));
     }
 
     public function joinedActivities()
     {
-
-
         return view('activities.joined_activities');
     }
 

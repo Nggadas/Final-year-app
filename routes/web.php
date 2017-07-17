@@ -7,8 +7,9 @@ Route::get('/activities/create', 'ActivitiesController@create');
 Route::post('/activities', 'ActivitiesController@store');
 Route::get('/activities/created', 'ActivitiesController@createdActivities');
 Route::get('/activities/joined', 'ActivitiesController@joinedActivities');
-Route::get('/activities/join', 'ActivityMembersController@create');
+Route::post('/activities/join', 'ActivityMembersController@create');
 Route::get('/activities/{activity}', 'ActivitiesController@viewActivity');
+Route::delete('/activities/leave', 'ActivityMembersController@destroy');
 
 Route::get('/register', 'RegistrationController@create');
 Route::post('/register', 'RegistrationController@store');
